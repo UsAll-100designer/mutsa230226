@@ -133,6 +133,24 @@ span{
 ---
 
 <style scoped>
+   
+    h1 {
+    padding-bottom: 0.5em;
+    color:#00AA8B;
+}
+</style>
+
+# 1M 4W 포트폴리오 현황 및 점검
+
+- 금전적인 부분이 부담스럽다면 블러 및 현황에 대한 안내가능
+
+- 구글밋으로 관련 발표진행
+
+- 추후 발표 녹화예정
+
+---
+
+<style scoped>
     h1{font-family: 'Poppins', sans-serif;}
     h1 {
     padding-bottom: 0.5em;
@@ -142,26 +160,19 @@ span{
 
 # Toss App
 
-- Column
-
-  - MainAxis
-  - CrossAxis
-
-- Row
-
-  - MainAxis
-  - CrossAxis
+- 거래내역
+- 현재 주식 내역
+- 종목 거래 내역 확인
+- 관심 주식
+- 카테고리별 주식 현황
 
 ![bg right](./img/toss-app.jpg)
 
 ---
 
-# 거래내역 
+# 거래내역
+
 - 한눈에 거래내역을 확인 가능함
-
-
-
-
 
 ![bg left](./img/toss01.png)
 
@@ -177,10 +188,8 @@ h1 {
 ---
 
 # 현재 주식 내역
+
 - 소액으로 투자 가능함
-
-
-
 
 ![bg left](./img/toss02.png)
 
@@ -196,10 +205,9 @@ h1 {
 ---
 
 # 종목 거래 내역확인
+
 - 주별로 주식 구매를 할 수 있음
 - 캐시백으로 3월까지 받을 수 있음
-
-
 
 ![bg right](./img/toss03.png)
 
@@ -213,10 +221,11 @@ h1 {
 </style>
 
 ---
-# 관심주식
-- 관심주식 설정시, 해당 주식의
-이슈를 알림으로 확인이 가능함
 
+# 관심주식
+
+- 관심주식 설정시, 해당 주식의
+  이슈를 알림으로 확인이 가능함
 
 ![bg left](./img/toss04.png)
 
@@ -233,10 +242,8 @@ h1 {
 
 # 카데고리별 주식 현황
 
-- 카데고리별 주식을 분류로 
-확인이 가능함
-
-
+- 카데고리별 주식을 분류로
+  확인이 가능함
 
 ![bg right](./img/toss05.png)
 
