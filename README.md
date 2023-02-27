@@ -1,8 +1,8 @@
 ---
 marp: true
-title: Flutter_Kick Off
+title: Mutsa_sunday_Kick Off
 footer: byline 100D
-header: Flutter_Kick Off
+header: 23 Year_Kick Off
 paginate: true
 # size: 4K
 ---
@@ -46,12 +46,9 @@ h1{ color:#fff}
 
 <!-- 여기는 제목 -->
 
-# Flutter
+# 2023 Start
 
-### Kick Off Meeting
-
-<br> Implement Any UI in Flutter
-<br>
+### 23 Year_Kick Off
 
 <style scoped>
 h1 {
@@ -76,45 +73,62 @@ span{
 ---
 
 <style scoped>
-    h1{font-family: 'Poppins', sans-serif;}
+  
     section{ color:#00AA8B;}
 </style>
 
-# How to Implement Any UI in Flutter
+# 투자 그리고 종목분석
 
-- UI Base Theme
+- 신문스크랩 (2) & 종목분석 (1)
 
-- Flutter UI
+- 1M 2W 투자종목 이슈 트래킹
 
-- Layout Axis
+- 1M 4W 포트폴리오 현황 및 점검
 
-- Style Guide
+- Toss 어플
 
-![bg right](./img/anyuicover.png)
+![bg right](./img/mutsa_sun01.jpeg)
 
 ---
 
 <style scoped>
-   h1{font-family: 'Poppins', sans-serif;}
+   
     h1 {
     padding-bottom: 0em;
     color:#00AA8B;
 }
 </style>
 
-# UI Base Theme
+# 신문스크랩 (2)
 
-### M3 &nbsp; [🔗](https://m3.material.io/)
+### & 종목분석 (1) &nbsp; [🔗](https://www.notion.so/koolbaek/Ver-1-5-5587400a01344055a889fa39970e62c8?pvs=4)
 
-- 디지털 경험을 만드는 도구를 결합한 통합 시스템
+- 한주당 신문스크랩 2개
 
-- 구글의 플랫디자인 기반 디자인
+- 투자중인 종목분석 1개
 
-- Components [🔗](https://m3.material.io/components/cards/overview)
+- 동일한 갯수 제한중 종목분석
+  카테고리가 생성됨
 
-- Implement in Flutter [🔗](https://api.flutter.dev/flutter/material/Card-class.html)
+![bg right](./img/scrap.png)
 
-![bg right](./img/materialDesign.jpeg)
+---
+
+<style scoped>
+   
+    h1 {
+    padding-bottom: 0.5em;
+    color:#00AA8B;
+}
+</style>
+
+# 1Month 2W 투자종목 이슈 트래킹
+
+- 이전 컨텐츠와 동일하게 투자종목에 대한
+  이슈들을 정리하며 관련 종목에 대해서 분석하고
+  자신만의 생각을 정리하는 컨텐츠를 만든다.
+
+- 하반기중에 유투브 채널 오픈예정
 
 ---
 
@@ -126,174 +140,7 @@ span{
 }
 </style>
 
-# Flutter UI
-
-- MaterialApp **OR** CupertinoApp
-
-- Scaffold
-
-- AppBar
-
-- Theme
-
-![bg right](./img/file_tree.png)
-
----
-
-# MaterialApp OR CupertinoApp
-
-```dart
-void main() { // 앱 진입점
-  WidgetsFlutterBinding.ensureInitialized();
-  AppSettings settings = AppSettings();
-
-  // Don't allow landscape mode
-  SystemChrome.setPreferredOrientations(
-          [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
-      .then((_) => runApp(MyApp(settings: settings)));
-}
-
-class MyApp extends StatelessWidget {
-  final AppSettings settings;
-
-  const MyApp({Key key, this.settings}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    //...
-    return MaterialApp( // --- (1)
-      title: 'Weather App',
-      debugShowCheckedModeBanner: false, // --- (2)
-      theme: theme, // --- (3)
-      home: PageContainer(settings: settings), // --- (4)
-    );
-  }
-}
-```
-
-<style scoped>
-    h1{font-family: 'Poppins', sans-serif;}
-    
-section{
-    color:#555;
-    font-size:1em;
-}
-h1 {
-    padding-bottom: 0em;
-    color:#00AA8B;
-    font-size:2em;
-}
-</style>
-
----
-
-# Scaffold
-
-```dart
-const Scaffold({
-	Key key,
-	this.appBar,
-	this.body,
-	this.floatingActionButton,
-	this.floatingActionButtonLocation,
-	this.floatingActionButtonAnimator,
-	this.persistentFooterButtons,
-	this.drawer,
-	this.endDrawer,
-	this.bottomNavigationBar,
-	this.bottomSheet,
-	this.backgroundColor,
-	this.resizeToAvoidBottomPadding = true,
-	this.primary = true,
-}) : assert(primary != null), super(key: key);
-```
-
-<style scoped>
-    h1{font-family: 'Poppins', sans-serif;}
-    
-section{
-    color:#555;
-    font-size:1em;
-}
-h1 {
-    padding-bottom: 0em;
-    color:#00AA8B;
-    font-size:2em;
-}
-</style>
-
----
-
-# AppBar
-
-```Dart
-return Scaffold(
-      appBar: PreferredSize( //---(1)
-        preferredSize: Size.fromHeight(ui.appBarHeight(context)),// --- (2)
-        child: TransitionAppbar(...) // ---(3)
-				),
-      );
-```
-
-<style scoped>
-    h1{font-family: 'Poppins', sans-serif;}
-    
-section{
-    color:#555;
-    font-size:1em;
-}
-h1 {
-    padding-bottom: 0em;
-    color:#00AA8B;
-    font-size:2em;
-}
-</style>
-
----
-
-# Theme
-
-```dart
-final theme = ThemeData(
-    fontFamily: "Cabin",
-    primaryColor: AppColor.midnightSky, // --- (1)
-    accentColor: AppColor.midnightCloud,
-    primaryTextTheme: Theme.of(context).textTheme.apply( // --- (2)
-          bodyColor: AppColor.textColorDark,
-          displayColor: AppColor.textColorDark,
-        ),
-    textTheme: Theme.of(context).textTheme.apply(
-          bodyColor: AppColor.textColorDark,
-          displayColor: AppColor.textColorDark,
-        ),
-  );
-```
-
-<style scoped>
-    h1{font-family: 'Poppins', sans-serif;}
-    
-section{
-    color:#555;
-    font-size:1em;
-}
-h1 {
-    padding-bottom: 0em;
-    color:#00AA8B;
-    font-size:2em;
-}
-</style>
-
----
-
-<style scoped>
-    h1{font-family: 'Poppins', sans-serif;}
-    h1 {
-    padding-bottom: 0.5em;
-    color:#00AA8B;
-}
-</style>
-
-# Layout Axis
+# Toss App
 
 - Column
 
@@ -305,49 +152,21 @@ h1 {
   - MainAxis
   - CrossAxis
 
-![bg right](./img/layout.png)
+![bg right](./img/toss-app.jpg)
 
 ---
 
-# Column
+# 거래내역 
+- 한눈에 거래내역을 확인 가능함
 
-```dart
-Column(
-  mainAxisAlignment: MainAxisAlignment.center,
-  mainAxisSize: MainAxisSize.max,
-  crossAxisAlignment: CrossAxisAlignment.center,
-  children: [
-    Container(
-      padding: const EdgeInsets.all(0.0),
-      color: Colors.cyanAccent,
-      width: 80.0,
-      height: 80.0,
-    ),
-    Container(
-      padding: const EdgeInsets.all(0.0),
-      color: Colors.blueAccent,
-      width: 80.0,
-      height: 80.0,
-    ),
-    Container(
-      padding: const EdgeInsets.all(0.0),
-      color: Colors.orangeAccent,
-      width: 80.0,
-      height: 80.0,
-    ),
-  ],
-  ),
-```
 
-![bg left](./img/column.png)
+
+
+
+![bg left](./img/toss01.png)
 
 <style scoped>
-    h1{font-family: 'Poppins', sans-serif;}
-    
-section{
-    color:#555;
-    font-size:1em;
-}
+
 h1 {
     padding-bottom: 0em;
     color:#00AA8B;
@@ -357,45 +176,16 @@ h1 {
 
 ---
 
-# Row
+# 현재 주식 내역
+- 소액으로 투자 가능함
 
-```dart
-Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  mainAxisSize: MainAxisSize.max,
-  crossAxisAlignment: CrossAxisAlignment.center,
-  children: [
-  Container(
-    padding: const EdgeInsets.all(0.0),
-    color: Colors.cyanAccent,
-    width: 80.0,
-    height: 80.0,
-  ),
-  Container(
-    padding: const EdgeInsets.all(0.0),
-    color: Colors.blueAccent,
-    width: 80.0,
-    height: 80.0,
-  ),
-  Container(
-    padding: const EdgeInsets.all(0.0),
-    color: Colors.orangeAccent,
-    width: 80.0,
-    height: 80.0,
-  ),
-  ],
-),
-```
 
-![bg left](./img/row.png)
+
+
+![bg left](./img/toss02.png)
 
 <style scoped>
-    h1{font-family: 'Poppins', sans-serif;}
-    
-section{
-    color:#555;
-    font-size:1em;
-}
+
 h1 {
     padding-bottom: 0em;
     color:#00AA8B;
@@ -405,39 +195,33 @@ h1 {
 
 ---
 
-# Flex css
+# 종목 거래 내역확인
+- 주별로 주식 구매를 할 수 있음
+- 캐시백으로 3월까지 받을 수 있음
 
-```css
-.container {
-  justify-content: flex-start;
-  /* justify-content: flex-end; */
-  /* justify-content: center; */
-  /* justify-content: space-between; */
-  /* justify-content: space-around; */
-  /* justify-content: space-evenly; */
-}
 
-.container {
-  flex-wrap: wrap;
-  align-content: stretch;
-  /* align-content: flex-start; */
-  /* align-content: flex-end; */
-  /* align-content: center; */
-  /* align-content: space-between; */
-  /* align-content: space-around; */
-  /* align-content: space-evenly; */
-}
-```
 
-![bg right](./img/flex.png)
+![bg right](./img/toss03.png)
 
 <style scoped>
-    h1{font-family: 'Poppins', sans-serif;}
-    
-section{
-    color:#555;
-    font-size:1em;
+
+h1 {
+    padding-bottom: 0em;
+    color:#00AA8B;
+    font-size:2em;
 }
+</style>
+
+---
+# 관심주식
+- 관심주식 설정시, 해당 주식의
+이슈를 알림으로 확인이 가능함
+
+
+![bg left](./img/toss04.png)
+
+<style scoped>
+
 h1 {
     padding-bottom: 0em;
     color:#00AA8B;
@@ -447,41 +231,22 @@ h1 {
 
 ---
 
+# 카데고리별 주식 현황
+
+- 카데고리별 주식을 분류로 
+확인이 가능함
+
+
+
+![bg right](./img/toss05.png)
+
 <style scoped>
-   h1{font-family: 'Poppins', sans-serif;}
-    h1 {
+    
+    
+
+h1 {
     padding-bottom: 0em;
     color:#00AA8B;
+    font-size:2em;
 }
 </style>
-
-# Style Guide
-
-<!-- ### AS-IS &nbsp; [🔗](https://xd.adobe.com/view/92809efa-41b4-4b15-99f0-936a2fdf9ac3-c7d3/screen/dd8fd952-9869-4e2d-a40b-254e27590be7) -->
-
-<!-- ### Prototype &nbsp; [🔗](https://xd.adobe.com/view/f675a98e-3c67-428f-ad17-7cf3419fee0b-a326/) -->
-
-<!-- ### TO-BE &nbsp; [🔗](https://xd.adobe.com/view/4c0da597-b93c-4f85-b7ad-60358d618150-195e/) -->
-
-<!-- - Notion &nbsp; [🔗](https://www.notion.so/koolbaek/Flutter-1259ac2c0a074f9782c2635c0c04e961?pvs=4) -->
-
-![bg right](./img/materialDesign.jpeg)
-
----
-
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-     color:#00D063;
-}
-h2{color:#00A192}
-</style>
-
-## 추가 논의 예정
-
-- mov Icon [🔗](<https://www.imagetoday.co.kr/xsearch/preview/?s_menu=membership&mode=search&search=(ta0123t00025*%20%EC%B1%97%EB%B4%87)%2C%20(ta0123t00026*%20%EC%B1%97%EB%B4%87)&multi_offer=6%7C&offer_type=6%7C&pre_offer_type=6%7C&s_menu=membership&view_type=total&search_type=single&parent_arr=0&theme_year=0&theme_month=0&search_box=&rank_by=&rank_mode=balanced&textspace_membership=&adult=N&substitute=N&scroll=&file_ext=&shape=&media_type=&bm=prmov_footage&resolution=all&ae_version=all&sampling=N&page=1&perpage=10&totalpage=&theme_seq=&img_offer_type=&total_count=12&SearchFilter=ServiceDate:[*%20TO%202023-02-21T15:00:00Z],InsertDate:[*%20TO%202023-02-21T16:30:00Z],ApprovalStatus:1,!(__%EB%AF%BC%EA%B0%90%ED%95%9C%EC%BD%98%ED%85%90%EC%B8%A0),{!tag=ot}OfferType:(6)&scroll=0&img_code=ta0123t000264&img_seq=7095813&img_idx=4&sort=3&theme_seq=&search=(ta0123t00025*%20%EC%B1%97%EB%B4%87)%2C%20(ta0123t00026*%20%EC%B1%97%EB%B4%87)&cmd=search>)
-- interaction [🔗](https://codepen.io/iamevg/pen/JXpEYz)
-- Splash [🔗](https://codepen.io/winkerVSbecks/pen/oLmqQo)
-- Web Font & image font -> Web Font [🔗](https://www.sandollcloud.com/webfont)
-- API 관련 예)Textview [🔗](https://developer.android.com/guide/topics/ui/look-and-feel/autosizing-textview?hl=ko)
