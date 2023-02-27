@@ -174,7 +174,7 @@ span{
 
 - 한눈에 거래내역을 확인 가능함
 
-![bg left](./img/toss01.PNG)
+![bg left](./img/toss01.png)
 
 <style scoped>
 
@@ -191,7 +191,7 @@ h1 {
 
 - 소액으로 투자 가능함
 
-![bg left](./img/toss02.PNG)
+![bg left](./img/toss02.png)
 
 <style scoped>
 
@@ -209,7 +209,7 @@ h1 {
 - 주별로 주식 구매를 할 수 있음
 - 캐시백으로 3월까지 받을 수 있음
 
-![bg right](./img/toss03.PNG)
+![bg right](./img/toss03.png)
 
 <style scoped>
 
@@ -227,7 +227,7 @@ h1 {
 - 관심주식 설정시, 해당 주식의
   이슈를 알림으로 확인이 가능함
 
-![bg left](./img/toss04.PNG)
+![bg left](./img/toss04.png)
 
 <style scoped>
 
@@ -245,7 +245,7 @@ h1 {
 - 카데고리별 주식을 분류로
   확인이 가능함
 
-![bg right](./img/toss05.PNG)
+![bg right](./img/toss05.png)
 
 <style scoped>
     
@@ -254,6 +254,6 @@ h1 {
 h1 {
     padding-bottom: 0em;
     color:#00AA8B;
-    font-size:2em;
+    font-size:2em;  
 }
 </style>
